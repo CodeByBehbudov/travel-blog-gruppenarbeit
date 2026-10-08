@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  padding: 0 120px;
+
+  display: flex;
+  align-items: center;
+  gap: 70px;
+
+  background-color: #62aa8c;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.navigation a:hover {
+  color: #f1ca3a;
+}
+.hero {
+  width: 100%;
+  height: 330px;
+  background-color: #e9c52f;
+}
+.highlights {
+  padding: 65px 20px 45px;
+  text-align: center;
+  background-color: white;
+}
+
+.highlights-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+.highlights-title span {
+  width: 244px;
+  height: 56px;
+  font-family: "Arima", sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #4ea487;
+}
+
+.highlight-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.highlights-text {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+.highlights-description {
+    width: 979px;
+    height: 59px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    font-family: "Palanquin", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: 0;
+    text-align: center;
+    color: #543700;
+}
+.carousel {
+    position: relative;
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    height: 533px;
+    margin: 55px auto 0;
+    overflow: hidden;
+    border-radius: 0 100px 0 0;
+}
+
+.carousel-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 54px;
+  left: 44px;
+  width: 868px;
+  height: auto;
+  padding: 16px 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: left;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.carousel-slide:first-child .carousel-content {
+  width: 881px;
+  max-width: calc(100% - 88px);
+}
+.carousel-slide:first-child .carousel-content h3 {
+  width: 833px;
+}
+.carousel-content h3 {
+  width: 820px;
+  margin: 0;
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.carousel-content p {
+  width: 820px;
+  margin: 0;
+  font-family: "Palanquin", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    display: flex;
+    gap: 18px;
+    transform: translateX(-50%);
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.7;
+}
+
+.dot.active {
+    opacity: 1;
+}
+.carousel .carousel-dots {
+    position: absolute !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: 28px !important;
+    left: 50% !important;
+    display: flex !important;
+    gap: 18px;
+    transform: translateX(-50%) !important;
+    z-index: 5;
+}
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+.carousel > input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: auto;
+}
+#slide-1:checked ~ .carousel-slides .carousel-slide:nth-child(1),
+#slide-2:checked ~ .carousel-slides .carousel-slide:nth-child(2),
+#slide-3:checked ~ .carousel-slides .carousel-slide:nth-child(3),
+#slide-4:checked ~ .carousel-slides .carousel-slide:nth-child(4) {
+  display: block !important;
+}
+.carousel-dots {
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+.carousel-dots .dot {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+.carousel.carousel-dots {
+  display: none !important;
+}
+
+.carousel > input[type="radio"] {
+  position: absolute;
+  bottom: 38px;
+  width: 28px;
+  height: 28px;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#slide-1 { left: calc(50% - 95px); }
+#slide-2 { left: calc(50% - 41px); }
+#slide-3 { left: calc(50% + 13px); }
+#slide-4 { left: calc(50% + 67px); }
+
+.carousel .carousel-slides .carousel-slide {
+  display: none !important;
+}
+
+#slide-1:checked ~ .carousel-slides > .carousel-slide:nth-child(1),
+#slide-2:checked ~ .carousel-slides > .carousel-slide:nth-child(2),
+#slide-3:checked ~ .carousel-slides > .carousel-slide:nth-child(3),
+#slide-4:checked ~ .carousel-slides > .carousel-slide:nth-child(4) {
+  display: block !important;
+}
+.carousel > input[type="radio"]:checked {
+  background-color: #e5b82e;
+  box-shadow: none;
+}

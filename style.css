@@ -12,6 +12,7 @@ body {
 h2 {
   font-size: 52px;
   color: #4EA487;
+  font-family: "Arima", system-ui;
 }
 
 .header {
@@ -54,7 +55,7 @@ h2 {
   background-color: #e9c52f;
 }
 .highlights {
-  padding: 65px 20px 45px;
+  padding: 65px 0 0 0;
   text-align: center;
   background-color: white;
 }
@@ -262,7 +263,218 @@ h2 {
   box-shadow: none;
 }
 
+.faq-title {
+  padding: 65px 0 0 0;
+  margin: 0 0 24px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 .live-help {
   width: 36px;
   height: 41.2px;
 }
+
+:root {
+  --acc-bg: #F1C953;
+  --acc-border: #e2e8f0;
+  --acc-hover: #f8fafc;
+  --acc-text: #54370D;
+  --acc-muted: #54370D;
+  --acc-radius: 12px;
+  --acc-gap: 16px;
+}
+
+body {
+  font-family: "Palanquin", sans-serif;
+  color: var(--acc-text);
+  background: #fff;
+  padding: 2rem;
+}
+
+.accordion {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--acc-gap);
+}
+
+.accordion details {
+  background: var(--acc-bg);
+  border: 1px solid var(--acc-border);
+  border-radius: var(--acc-radius);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+
+.accordion details[open] {
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background .15s;
+}
+
+.accordion summary::-webkit-details-marker { display: none; }
+
+.accordion summary:hover {
+  background: var(--acc-hover);
+}
+
+.accordion summary::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--acc-muted);
+  border-bottom: 2px solid var(--acc-muted);
+  transform: rotate(45deg);
+  transition: transform .25s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.accordion details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.accordion .content {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--acc-muted);
+  line-height: 1.6;
+}   
+
+.contact-form-title {
+  padding: 65px 0 0 0;
+  margin: 0 auto;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.person-pin {
+  width: 36px;
+  height: 41.2px;
+}
+
+.contact-form {
+  background: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #6b4f3a;
+  text-align: center;
+}
+
+.form-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.form-title {
+  font-family: Georgia, serif;
+  color: #2f8f8f;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.form-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* --- Grid-Layout für die Felder --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+  text-align: left;
+}
+
+.form-grid .field {
+  margin-bottom: 28px;
+}
+
+/* Textarea nimmt beide Spalten ein */
+.form-grid .field--full {
+  grid-column: 1 / -1;
+}
+
+.field span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #6b4f3a;
+  background: transparent;
+  padding: 6px 2px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #6b4f3a;
+  outline: none;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-bottom-color: #2f8f8f;
+}
+
+.privacy {
+  display: block;
+  font-size: 13px;
+  text-align: left;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.privacy input {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.privacy a {
+  color: #2f8f8f;
+  text-decoration: none;
+}
+
+.privacy a:hover {
+  text-decoration: underline;
+}
+
+.send-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 48px;
+  background: transparent;
+  color: #6b4f3a;
+  border: 1px solid #6b4f3a;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.send-btn:hover {
+  background: #2f8f8f;
+  color: #ffffff;
+  border-color: #2f8f8f;
+}   

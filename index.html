@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@400;500&family=Palanquin+Dark:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -111,13 +112,88 @@
   </div>
 </div>
 
-<div>
-    <img class="live-help" src="./img/live_help.png">
-    <h2>FAQ</h2>
-</div>
-
 </div>
 </section>
   
+<h2 class="faq-title">
+      <img class="live-help" src="./img/live_help.png" alt="live help logo">FAQ
+</h2>
+
+<div class="accordion">
+  <details close>
+    <summary>What's the story behind my travel blog?</summary>
+    <div class="content">
+      Ein Akkordeon ist ein UI-Muster, bei dem sich mehrere Bereiche nacheinander
+      auf- und zuklappen lassen. Der Inhalt schiebt den darunterliegenden
+      Inhalt nach unten – im Gegensatz zu einem Dropdown, das absolut positioniert ist.
+    </div>
+  </details>
+
+  <details close>
+    <summary>How do I plan, document, and share my travels?</summary>
+    <div class="content">
+      Mit reinem CSS lässt sich das Aufklappen von <code>&lt;details&gt;</code>
+      noch nicht flüssig animieren (Stand 2026). Für eine sanfte
+      Max-Height-Transition wird meist ein paar Zeilen JS ergänzt.
+    </div>
+  </details>
+
+  <details close>
+    <summary>How can brands, companies, or fellow creators collaborate with me or get in touch?</summary>
+    <div class="content">
+      Ja – das <code>name</code>-Attribut auf den <code>&lt;details&gt;</code>-Elementen
+      sorgt dafür, dass sich beim Öffnen eines Panels die anderen automatisch schließen
+      (verhält sich wie ein Radiobutton-Grupp).
+    </div>
+  </details>
+
+  <details close>
+    <summary>How can readers support this blog and the work behind it?</summary>
+    <div class="content">
+      Ja – das <code>name</code>-Attribut auf den <code>&lt;details&gt;</code>-Elementen
+      sorgt dafür, dass sich beim Öffnen eines Panels die anderen automatisch schließen
+      (verhält sich wie ein Radiobutton-Grupp).
+    </div>
+  </details>
+</div>
+
+<h2 class="contact-form-title">
+      <img class="live-help" src="./img/person_pin.png" alt="person pin logo">Contact form
+</h2>
+
+<form class="contact-form" action="#" method="POST">
+  <div class="form-subtitle">
+    Have a question or an idea to collaborate?<br>
+    Get in touch—I'd love to hear from you and explore how we can work together.
+  </div>
+
+  <div class="form-grid">
+  <label class="field">
+    <span>What's your name?</span>
+    <input type="text" name="name" required>
+  </label>
+
+  <label class="field">
+    <span>What's your email?</span>
+    <input type="email" name="email" required>
+  </label>
+
+  <label class="field field--full">
+    <span>How can I help?</span>
+    <textarea name="message" rows="4" required></textarea>
+  </label>
+</div>   
+
+  <label class="privacy">
+    <input type="checkbox" name="privacy" required>
+    I've read the <a href="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.
+  </label>
+
+  <button type="submit" class="send-btn">Send</button>
+</form>   
+
+</body>
+</html>
+
 </body>
 </html>

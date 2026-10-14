@@ -11,19 +11,20 @@ body {
 
 .header {
   width: 100%;
-  height: 90px;
+  height: 128px;
   padding: 0 120px;
 
   display: flex;
   align-items: center;
   gap: 70px;
 
-  background-color: #62aa8c; 
+  background-color: #4EA487;
 }
 
 .logo {
-  width: 70px;
-  height: auto;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
 }
 
 .navigation {
@@ -39,9 +40,35 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
-
-.navigation a:hover {
+.navigation a:nth-child(2) {
+  color: #F8F5E8;
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0;
+}
+.navigation a:nth-child(3) {
+  color: #F8F5E8;
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0;
+}
+.navigation a:first-child {
+  color: #F8F5E8;
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0;
+}
+.header .navigation a:hover,
+.header .navigation a:focus,
+.header .navigation a:active {
   color: #f1ca3a;
+  text-decoration: none;
 }
 .hero {
   width: 100%;
@@ -587,6 +614,9 @@ body {
   color: #543700;
   cursor: pointer;
 }
+.contact-section button:hover{
+  background-color:#F1C953;
+}
 
 @media (max-width: 600px) {
   .contact-fields {
@@ -786,6 +816,11 @@ font-weight: 400;
 line-height: 1.2;
 margin-right: 72px;
 }
+.footer-socials {
+  width: 188px;
+  height: 32px;
+  gap: 16px;
+}
 
 .footer-copyright {
   gap: 4px;
@@ -814,7 +849,7 @@ line-height: 1.2;
 }
 
 .footer-socials {
-  gap: 10px;
+  gap: 16px;
   margin-left: auto;
 }
 
@@ -855,7 +890,7 @@ line-height: 1.2;
     gap: 20px;
   }
 }
-/* Header nach den Figma-Maßen */
+
 .header {
   box-sizing: border-box;
   width: 100%;
@@ -964,7 +999,7 @@ line-height: 1.2;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
+  gap: 72px;
 }
 
 .article-intro {
@@ -1283,15 +1318,20 @@ line-height: 1.2;
   border-radius: 53px;
 }
 .video-intro {
-  width: 1100px;
-  margin: 64px auto 48px;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #543700;
+  width: 1200px;
+  height: 87px;
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #3D3D3D;
+  margin-bottom: 88px;
 }
 .article-body-text {
   width: 1201px;
-  max-width: calc(100% - 40px);
+  max-width: 100%;
   margin: 32px auto 0;
   display: flex;
   flex-direction: column;
@@ -1314,6 +1354,11 @@ line-height: 1.2;
   max-width: 100%;
   height: 145px;
 }
+.article-text-third {
+  width: 1201px;
+  max-width: 100%;
+  height: 232px;
+}
 
 .article-list-block {
   width: 1000px;
@@ -1329,6 +1374,9 @@ line-height: 1.2;
   margin: 0;
   padding-left: 32px;
 }
+.article-list-block li::marker {
+  font-size: 12px;
+}
 
 .article-list-block strong {
   font-weight: 700;
@@ -1337,72 +1385,566 @@ line-height: 1.2;
 .article-text-last {
   width: 1201px;
   max-width: 100%;
+  height: auto;
+}
+.article-image {
+  display: block;
+  width: 936px;
+  max-width: 100%;
+  height: auto;
+  margin: 32px auto 0;
+}
+/* Text oberhalb des Bildes */
+.video-intro {
+  width: 1200px;
+  max-width: 100%;
+  height: 87px;
+
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #3d3d3d;
+}
+
+/* Gemeinsame Schriftwerte unterhalb des Bildes */
+.article-body-text {
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #3d3d3d;
+}
+
+/* Erster Text */
+.article-text-first {
+  width: 1201px;
+  max-width: 100%;
+  height: 145px;
+}
+
+/* Mittlerer Listenbereich */
+.article-list-block {
+  width: 1000px;
+  max-width: 100%;
+  height: 203px;
+}
+
+/* Dunkle Textstellen */
+.article-list-block strong {
+  font-weight: 700;
+}
+
+/* Kleine Aufzählungspunkte */
+.article-list-block li::marker {
+  font-size: 12px;
+}
+
+/* Letzter Text */
+.article-text-last {
+  width: 1201px;
+  max-width: 100%;
   height: 232px;
 }
+/* =========================
+   PRO TIPPS
+========================= */
 
-.first-page {
-  padding-top: 88px;
+.tips-section {
+  position: relative;
+  width: 1130px;
+  height: 260.55px;
+  margin: 0 auto;
 }
 
-#article-top-article-01 {
-  padding-bottom: 72px;
+.tips-label {
+  position: absolute;
+  top: -5.89px;
+  z-index: 1;
 }
 
-.article-photos-beaches {
-  width: 1100px;
+.tips-box {
+  position: absolute;
+  left: 51px;
+  top: 65.55px;
+  width: 1083px;
+}
+
+.tips-badge-background {
+    position: absolute;
+    inset: 0;
+    background-color: #4EA487;
+    border-radius: 10px;
+    transform-origin: center;
+}
+
+.tips-title {
+    position: absolute;
+    top: 19.55px;
+    left: 67.91px;
+    width: 113px;
+    height: 34px;
+    font-family: "Palanquin", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    white-space: nowrap;
+    color: #F1C953;
+    
+}
+
+.tips-bulb {
+    position: absolute;
+    top: 39.54px;
+    left: 18.03px;
+    width: 43.75px;
+    height: 42.19px;
+    fill: none;
+    color:  #F1C953;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+}
+
+
+
+.tips-list {
+  margin: 0;
+  padding-left: 32px;
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #3d3d3d;
+}
+
+.tips-list li + li {
+  margin-top: 8px;
+}
+
+.tips-list a {
+  color: #4ea487;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* =========================
+   SHARE-BEREICH
+========================= */
+
+.share-section {
+  width: 650px;
+  max-width: calc(100% - 40px);
+  min-height: 300px;
+  margin: 70px auto 60px;
+  text-align: center;
+  font-family: "Palanquin", sans-serif;
+}
+
+.share-section p {
+  width: 463px;
+  max-width: 100%;
+  height: 58px;
+  margin: 0 auto;
+  color: #543700;
+  font-family: "Arima", cursive;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.share-actions {
   display: flex;
-  flex-direction: column;
-  padding: 0 50px 72px 50px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 35px;
+  margin-top: 20px;
 }
 
-.headline-photos-beaches {
-  font-family: Palanquin;
-font-weight: 700;
-font-style: Bold;
-font-size: 24px;
-line-height: 100%;
-letter-spacing: 0%;
-display: flex;
-justify-content: center;
-width: 100%;
-padding-bottom: 24px;
+
+.share-button {
+  width: 150px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2px;
+  border-radius: 25px;
+  background-color: #4ea487;
+  color: #f1c933;
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  text-decoration: none;
 }
 
-.photos-beaches-container {
+
+/* =========================
+   FOOTER
+========================= */
+
+.article-footer {
+  width: 100vw;
+  min-height: 160px;
+  margin-left: calc(50% - 50vw);
+  padding: 0 80px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #23856c;
+  font-family: "Palanquin", sans-serif;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.footer-left span,
+.footer-left a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials img {
+  display: block;
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .tips-section {
+    height: auto;
+    margin-top: 80px;
+  }
+
+  .share-section p {
+    font-size: 22px;
+  }
+
+  .article-footer {
+    padding: 35px 25px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.tips-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    color: #F1C953;
+    position: absolute;
+    top: 40.38px;
+    left: 9.66px;
+}
+.tips-section {
+  position: relative;
+  width: 1083px;
+  max-width: calc(100% - 40px);
+  margin: 66.55px auto 0;
+}
+
+.tips-box-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tips-label-image {
+  width: 195.92px;
+  height: 66px;
+  top: -5.89px;
+  position: absolute;
+  left: -40px;
+  z-index: 1;
+}
+.pro-tips-group {
+  position: relative;
+  width: 1134px;
+  height: 260.55px;
+  margin-top: 70px;
+}
+
+.pro-tips-frame {
+  position: absolute;
+  left: 51px;
+  top: 65.55px;
+  box-sizing: border-box;
+  width: 1083px;
+  height: 196px;
+  margin: 0;
+  padding: 26px 16px 24px;
+  border-radius: 30px;
+  background-color: rgba(78, 164, 135, 0.2);
+}
+
+.pro-tips-text {
+  box-sizing: border-box;
   width: 100%;
   margin: 0;
-  
+  padding-left: 16px;
+  font-family: "Palanquin", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 120%;
 }
 
-.photos-beaches-container img {
-  width: 40%;       /* Größe jedes Bildes */
-  flex-shrink: 0;   /* Bilder werden nicht verkleinert */
-  width: 300px;
-  height: 440px;
+.pro-tips-text strong {
+  color: #4EA487;
+  font-weight: 700;
+}
+.pro-tips-badge {
+  position: absolute;
+  left: -5px;
+  top: -5.89px;
+  width: 206px;
+  height: auto;
+  z-index: 3;
+}
+.share-section > p {
+  width: 463px;
+  max-width: 100%;
+  height: 58px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #543700;
+  text-align: center;
+  font-size: 24px;
+}
+.share-actions {
+  position: relative;
+  display: block;
+  width: 463px;
+  max-width: 100%;
+  height: 75px;
+  margin: 0 auto;
 }
 
-/* Jedes Bild ab dem 2. wird nach links gezogen */
-.photos-beaches-container img + img {
-  margin-left: -16%;  /* Überlappungsgröße – hier anpassen */
+.share-arrow {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 106.9px;
+  height: 65.03px;
+  object-fit: contain;
 }
 
-/* Sicherstellen, dass rechtes Bild VOR linkem liegt */
-.photos-beaches-container img:nth-child(1) { z-index: 1; }
-.photos-beaches-container img:nth-child(2) { z-index: 2; }
-.photos-beaches-container img:nth-child(3) { z-index: 3; }
-.photos-beaches-container img:nth-child(4) { z-index: 4; }
-.photos-beaches-container img:nth-child(5) { z-index: 5; }   
+.share-button {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
 
-.eins {
-  font-family: Palanquin;
-font-weight: 400;
-font-style: Regular;
-font-size: 24px;
-leading-trim: NONE;
-line-height: 120%;
-letter-spacing: 0%;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
+  width: 158px;
+  height: 48px;
+  padding: 0 24px;
+  margin: 0;
+
+  border: 0;
+  border-radius: 40px;
+  background-color: #4EA487;
+
+  color: #F1C953;
+  text-decoration: none;
 }
+iframe.article-image {
+  display: block;
+  width: 931px;
+  height: 520px;
+  border: 0;
+  border-radius: 53px;
+}
+.video-preview {
+  position: relative;
+  display: block;
+  width: 931px;
+  height: 520px;
+  max-width: 100%;
+  margin: 88px auto;
+  overflow: hidden;
+  border-radius: 53px;
+}
+
+.video-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* SHARE-BEREICH */
+.share-section {
+  position: relative;
+  box-sizing: border-box;
+  width: 493px;
+  max-width: calc(100% - 40px);
+  height: 154px;
+  margin: 70px auto 60px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+}
+
+/* Überschrift: 463 × 58 px */
+.share-section > p {
+  box-sizing: border-box;
+  width: 463px;
+  max-width: 100%;
+  height: 58px;
+  margin: 0;
+  color: #543700;
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Bereich für Pfeil und Button */
+.share-actions {
+  box-sizing: border-box;
+  position: static;
+  width: 463px;
+  max-width: 100%;
+  height: 48px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pfeil: 106,9 × 65,03 px; Position laut Figma-Foto */
+.share-arrow {
+  position: absolute;
+  left: 12px;
+  top: 66px;
+  width: 106.9px;
+  height: 65.03px;
+  object-fit: contain;
+}
+
+.share-button {
+  position: static;
+  left: auto;
+  top: auto;
+  transform: translateX(-8px);
+
+  box-sizing: border-box;
+  flex: 0 0 158px;
+  width: 158px;
+  height: 48px;
+  margin: 0;
+  padding: 0 24px;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border: 0;
+  border-radius: 40px;
+  background-color: #4EA487;
+  color: #F1C953;
+  text-decoration: none;
+
+  font-family: "Arima", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
+/* Auf schmalen Bildschirmen innerhalb des Viewports halten */
+@media (max-width: 560px) {
+  .share-section {
+    max-width: calc(100% - 32px);
+  }
+
+  .share-section > p,
+  .share-actions {
+    width: 100%;
+  }
+
+  .share-section {
+    height: auto;
+  }
+
+  .share-section > p {
+    height: auto;
+  }
+
+  .share-arrow {
+    left: 0;
+  }
+}
+.share-button .share-icon {
+  width: 20px;
+  height: 22px;
+  flex: 0 0 20px;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 

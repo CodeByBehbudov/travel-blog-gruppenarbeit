@@ -891,6 +891,97 @@ line-height: 1.2;
   }
 }
 
+#header-first-page {
+  margin-top: 24px;
+}
+
+#article-top-article-01 {
+  padding-bottom: 72px;
+  gap: 16px;
+}
+
+.article-photos-beaches {
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px 72px 50px;
+}
+
+.headline-photos-beaches {
+  font-family: Palanquin;
+font-weight: 700;
+font-style: Bold;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+display: flex;
+justify-content: center;
+width: 1100px;
+padding-bottom: 24px;
+}
+
+.photos-beaches-container {
+  display: flex;
+  width: 60%;
+  margin: 0;
+  
+}
+
+.photos-beaches-container img {
+  width: 40%;       /* Größe jedes Bildes */
+  flex-shrink: 0;   /* Bilder werden nicht verkleinert */
+  width: 300px;
+  height: 440px;
+}
+
+/* Jedes Bild ab dem 2. wird nach links gezogen */
+.photos-beaches-container img + img {
+  margin-left: -16%;  /* Überlappungsgröße – hier anpassen */
+}
+
+/* Sicherstellen, dass rechtes Bild VOR linkem liegt */
+.photos-beaches-container img:nth-child(1) { z-index: 1; }
+.photos-beaches-container img:nth-child(2) { z-index: 2; }
+.photos-beaches-container img:nth-child(3) { z-index: 3; }
+.photos-beaches-container img:nth-child(4) { z-index: 4; }
+.photos-beaches-container img:nth-child(5) { z-index: 5; }   
+
+.eins {
+  font-family: Palanquin;
+font-weight: 400;
+font-style: Regular;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 120%;
+letter-spacing: 0%;
+padding-bottom: 72px;
+}
+
+
+.pro-box-1 {
+  text-align: left;
+}
+
+.pro-box-2 {
+  padding: 0 84px 72px 84px;
+}
+
+
+.pro-box-3 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.pro-tipps {
+  width: 1083px;
+  border: 2px dashed #4EA48733;
+  border-radius: 12px;
+  background-color: #e8f5e9; /* helles Grün */
+  padding: 16px;
+}   
+
+
+
 .header {
   box-sizing: border-box;
   width: 100%;

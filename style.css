@@ -619,6 +619,9 @@ body {
 }
 
 @media (max-width: 600px) {
+
+
+
   .contact-fields {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -801,6 +804,17 @@ body {
 }
 
 @media (max-width: 600px) {
+
+  .navigation a {
+    display: none;
+  }
+  
+  .header img {
+    height: 200px;
+    justify-content: center;
+  }
+
+
   .contact-fields {
     grid-template-columns: 1fr;
     height: auto;
